@@ -200,7 +200,7 @@
   
   
   <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/27/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/28/Markdown基本用法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="逐日">
@@ -214,7 +214,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2019/09/27/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+            <a href="/2019/09/28/Markdown基本用法/" class="post-title-link" itemprop="url">Markdown基本用法.md</a>
           
         </h1>
 
@@ -229,8 +229,12 @@
                 
               
 
-              <time title="创建时间：2019-09-27 20:01:02" itemprop="dateCreated datePublished" datetime="2019-09-27T20:01:02+08:00">2019-09-27</time>
+              <time title="创建时间：2019-09-28 11:31:32 / 修改时间：22:38:45" itemprop="dateCreated datePublished" datetime="2019-09-28T11:31:32+08:00">2019-09-28</time>
             </span>
+          
+            
+
+            
           
 
           
@@ -244,20 +248,60 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+          <h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><p>也可以使用-来定义<br>一级标题<br>=<br>二级标题<br>-</p>
+<p>这是换行</p>
+<p>当我们需要进行段落强调。</p>
+<blockquote>
+<p>段落强调<br>区块引用</p>
+<blockquote>
+<p>嵌套引用</p>
+<blockquote>
+<p>三嵌套引用</p>
+<blockquote>
+<p>四嵌套引用</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>代码区块</p>
+<pre><code>#include &lt;stdo.h&gt;
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+int main(){
+    printf(&quot;这是一串代码&quot;);
+}
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+return 0;</code></pre><p>再强调类容两侧分别加上<em>或者-,如：<br>*斜体</em> ,<em>斜体<em>。<br><strong>加粗</strong>,__加粗</em></em></p>
+<p>使用+活-标记无序列表</p>
+<ul>
+<li>第一项</li>
+</ul>
+<ul>
+<li>第二项</li>
+</ul>
+<ul>
+<li>第三项</li>
+</ul>
+<ul>
+<li>第四项</li>
+</ul>
+<p>使用有序列表，在前方使用数字标识，例如：</p>
+<ol>
+<li>黄瓜</li>
+<li>玉米</li>
+<li>茄子</li>
+</ol>
+<p>使用列表项中包含多个段落，为了保证渲染正常，*与段落首字母之间必须保留四个空格</p>
+<ul>
+<li>段落一<br>是否可啦啦啦啦啦啦啦啦啦</li>
+<li>段落二<blockquote>
+<p>去快标记<br>阿<br>分割线，加入分割线</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<hr>
+<p>高级插入代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fun (x: Int, y: Int): Int &#123;</span><br><span class="line">  return x + y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
       
     </div>
