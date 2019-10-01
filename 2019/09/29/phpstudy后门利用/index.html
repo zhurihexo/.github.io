@@ -56,13 +56,13 @@
   };
 </script>
 
-  <meta name="description" content="之前爆出的phpstudy后门，今天来复现一下 通过爆出来的信息得知，后门隐藏再PHP文件夹里，版本分别是php-5.217，php-5.4.45。后门代码存在\ext\php_xmlrpc.dll里  我们可以打开文件搜索关键字@eval  发现确实存在后门 那么上EXP 1234567891011GET /1.php HTTP/1.1Host: secquan.orgCache-Control">
+  <meta name="description" content="之前爆出的phpstudy后门，今天来复现一下 通过爆出来的信息得知，后门隐藏再PHP文件夹里，版本分别是php-5.217，php-5.4.45。后门代码存在\ext\php_xmlrpc.dll里">
 <meta name="keywords" content="phpstudy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="phpstudy后门利用">
 <meta property="og:url" content="http://yoursite.com/2019/09/29/phpstudy后门利用/index.html">
 <meta property="og:site_name" content="逐日的博客">
-<meta property="og:description" content="之前爆出的phpstudy后门，今天来复现一下 通过爆出来的信息得知，后门隐藏再PHP文件夹里，版本分别是php-5.217，php-5.4.45。后门代码存在\ext\php_xmlrpc.dll里  我们可以打开文件搜索关键字@eval  发现确实存在后门 那么上EXP 1234567891011GET /1.php HTTP/1.1Host: secquan.orgCache-Control">
+<meta property="og:description" content="之前爆出的phpstudy后门，今天来复现一下 通过爆出来的信息得知，后门隐藏再PHP文件夹里，版本分别是php-5.217，php-5.4.45。后门代码存在\ext\php_xmlrpc.dll里">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_09-50-28.png?x-oss-process=style/hexo">
 <meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_09-52-32.png?x-oss-process=style/hexo">
@@ -72,10 +72,10 @@
 <meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_12-23-19.png?x-oss-process=style/hexo">
 <meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_12-24-22.png?x-oss-process=style/hexo">
 <meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_12-29-16.png?x-oss-process=style/hexo">
-<meta property="og:updated_time" content="2019-10-01T04:41:17.945Z">
+<meta property="og:updated_time" content="2019-10-01T07:50:30.762Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="phpstudy后门利用">
-<meta name="twitter:description" content="之前爆出的phpstudy后门，今天来复现一下 通过爆出来的信息得知，后门隐藏再PHP文件夹里，版本分别是php-5.217，php-5.4.45。后门代码存在\ext\php_xmlrpc.dll里  我们可以打开文件搜索关键字@eval  发现确实存在后门 那么上EXP 1234567891011GET /1.php HTTP/1.1Host: secquan.orgCache-Control">
+<meta name="twitter:description" content="之前爆出的phpstudy后门，今天来复现一下 通过爆出来的信息得知，后门隐藏再PHP文件夹里，版本分别是php-5.217，php-5.4.45。后门代码存在\ext\php_xmlrpc.dll里">
 <meta name="twitter:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_09-50-28.png?x-oss-process=style/hexo">
   <link rel="canonical" href="http://yoursite.com/2019/09/29/phpstudy后门利用/">
 
@@ -299,7 +299,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-01 12:41:17" itemprop="dateModified" datetime="2019-10-01T12:41:17+08:00">2019-10-01</time>
+                <time title="修改时间：2019-10-01 15:50:30" itemprop="dateModified" datetime="2019-10-01T15:50:30+08:00">2019-10-01</time>
               </span>
             
           
@@ -317,6 +317,7 @@
       
         <p>之前爆出的phpstudy后门，今天来复现一下</p>
 <p>通过爆出来的信息得知，后门隐藏再PHP文件夹里，版本分别是php-5.217，php-5.4.45。后门代码存在\ext\php_xmlrpc.dll里</p>
+<a id="more"></a>
 <p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_09-50-28.png?x-oss-process=style/hexo" alt="blockchain"></p>
 <p>我们可以打开文件搜索关键字@eval</p>
 <p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/phpstudy/Snipaste_2019-10-01_09-52-32.png?x-oss-process=style/hexo" alt="blockchain"></p>
