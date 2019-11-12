@@ -56,20 +56,23 @@
   };
 </script>
 
-  <meta name="description" content="sqlmap常用命令sqlmap作为我们渗透测试中的常用工具，必须要熟练掌握.    但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。发送请求sqlmap.py -u&amp;quot;&amp;quot; --cookie=&amp;quot;&amp;quot;  此语句用于后台注入，带上cookie，才能访问到该页面   sqlmap.py -u&amp;quot;&amp;quot; --random">
+  <meta name="description" content="sqlmap常用命令sqlmap作为我们渗透测试中的常用工具，必须要熟练掌握.    但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。">
 <meta name="keywords" content="zhuiri">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sqlmap常用命令">
 <meta property="og:url" content="http://yoursite.com/2019/11/11/sqlmap常用命令/index.html">
 <meta property="og:site_name" content="逐日的博客">
-<meta property="og:description" content="sqlmap常用命令sqlmap作为我们渗透测试中的常用工具，必须要熟练掌握.    但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。发送请求sqlmap.py -u&amp;quot;&amp;quot; --cookie=&amp;quot;&amp;quot;  此语句用于后台注入，带上cookie，才能访问到该页面   sqlmap.py -u&amp;quot;&amp;quot; --random">
+<meta property="og:description" content="sqlmap常用命令sqlmap作为我们渗透测试中的常用工具，必须要熟练掌握.    但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/sqlmap%E5%9F%BA%E7%A1%80/1.png?x-oss-process=style/hexo&Expires=1573472370&OSSAccessKeyId=TMP.hejeBvgg3UzXhDTRpybqzsZCNfrPhfyLB1c3JfyurUgjjsa5DGfNY4vcX544nyivekVpPcpZC9pN5VWgcYJUpZnYn4yxNBXmnkLRVMzXvjo5o5rwVDpx2BMVaBekvi.tmp&Signature=ieU5b5GWy5GDuei%2BQdB55I%2FMOic%3D">
-<meta property="og:updated_time" content="2019-11-11T10:50:43.183Z">
+<meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/sqlmap%E5%9F%BA%E7%A1%80/2.png?x-oss-process=style/hexo">
+<meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/sqlmap%E5%9F%BA%E7%A1%80/3.png?x-oss-process=style/hexo">
+<meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/sqlmap%E5%9F%BA%E7%A1%80/4.png?x-oss-process=style/hexo">
+<meta property="og:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/sqlmap%E5%9F%BA%E7%A1%80/1.png?x-oss-process=style/hexo">
+<meta property="og:updated_time" content="2019-11-12T05:37:47.180Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sqlmap常用命令">
-<meta name="twitter:description" content="sqlmap常用命令sqlmap作为我们渗透测试中的常用工具，必须要熟练掌握.    但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。发送请求sqlmap.py -u&amp;quot;&amp;quot; --cookie=&amp;quot;&amp;quot;  此语句用于后台注入，带上cookie，才能访问到该页面   sqlmap.py -u&amp;quot;&amp;quot; --random">
-<meta name="twitter:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/sqlmap%E5%9F%BA%E7%A1%80/1.png?x-oss-process=style/hexo&Expires=1573472370&OSSAccessKeyId=TMP.hejeBvgg3UzXhDTRpybqzsZCNfrPhfyLB1c3JfyurUgjjsa5DGfNY4vcX544nyivekVpPcpZC9pN5VWgcYJUpZnYn4yxNBXmnkLRVMzXvjo5o5rwVDpx2BMVaBekvi.tmp&Signature=ieU5b5GWy5GDuei%2BQdB55I%2FMOic%3D">
+<meta name="twitter:description" content="sqlmap常用命令sqlmap作为我们渗透测试中的常用工具，必须要熟练掌握.    但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。">
+<meta name="twitter:image" content="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/sqlmap%E5%9F%BA%E7%A1%80/2.png?x-oss-process=style/hexo">
   <link rel="canonical" href="http://yoursite.com/2019/11/11/sqlmap常用命令/">
 
 
@@ -281,11 +284,19 @@
                 
               
 
-              <time title="创建时间：2019-11-11 17:45:53 / 修改时间：18:50:43" itemprop="dateCreated datePublished" datetime="2019-11-11T17:45:53+08:00">2019-11-11</time>
+              <time title="创建时间：2019-11-11 17:45:53" itemprop="dateCreated datePublished" datetime="2019-11-11T17:45:53+08:00">2019-11-11</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-12 13:37:47" itemprop="dateModified" datetime="2019-11-12T13:37:47+08:00">2019-11-12</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -317,7 +328,8 @@
 <blockquote>
 </blockquote>
 </blockquote>
-<h4 id="但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。"><a href="#但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。" class="headerlink" title="但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。"></a>但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。</h4><h3 id="发送请求"><a href="#发送请求" class="headerlink" title="发送请求"></a>发送请求</h3><pre><code>sqlmap.py -u&quot;&quot; --cookie=&quot;&quot;</code></pre><blockquote>
+<h4 id="但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。"><a href="#但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。" class="headerlink" title="但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。"></a>但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。</h4><a id="more"></a>
+<h3 id="发送请求"><a href="#发送请求" class="headerlink" title="发送请求"></a>发送请求</h3><pre><code>sqlmap.py -u&quot;&quot; --cookie=&quot;&quot;</code></pre><blockquote>
 <blockquote>
 <p>此语句用于后台注入，带上cookie，才能访问到该页面</p>
 </blockquote>
@@ -355,18 +367,9 @@
 <p>列出所有管理用户</p>
 </blockquote>
 <pre><code>sqlmap.py -u&quot;&quot; --dbs</code></pre><blockquote>
-<p>列出当前所有数据库</p>
+<p>列出当前所有数据库<br><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/sqlmap%E5%9F%BA%E7%A1%80/2.png?x-oss-process=style/hexo" alt="blockchain" title="sqlmap"><br>    sqlmap.py -u”” –table -D dvwa<br>列出 dvwa库中的所有表<br><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/sqlmap%E5%9F%BA%E7%A1%80/3.png?x-oss-process=style/hexo" alt="blockchain" title="sqlmap"><br>    sqlmap.py –u”” –columns -T users -D dvwa<br>列出 users表中的所有字段<br><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/sqlmap%E5%9F%BA%E7%A1%80/4.png?x-oss-process=style/hexo" alt="blockchain" title="sqlmap"><br>    sqlmap.py -u”” –dump -C users,password -T users -D dvwa<br>列出两个字段的类容,此时你可以用sqlmap来跑这些密码，sqlmap里面有自动脚本，帮你跑出hash值.<br><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/sqlmap%E5%9F%BA%E7%A1%80/1.png?x-oss-process=style/hexo" alt="blockchain" title="sqlmap"></p>
 </blockquote>
-<pre><code>sqlmap.py --table -D dvwa</code></pre><blockquote>
-<p>列出 dvwa库中的所有表</p>
-</blockquote>
-<pre><code>sqlmap.py --columns -T users -D dvwa</code></pre><blockquote>
-<p>列出 users表中的所有字段</p>
-</blockquote>
-<pre><code>sqlmap.py --dump -C users,password -T users -D dvwa</code></pre><blockquote>
-<p>列出两个字段的类容,此时你可以用sqlmap来跑这些密码，sqlmap里面有自动脚本，帮你跑出hash值.<br><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/sqlmap%E5%9F%BA%E7%A1%80/1.png?x-oss-process=style/hexo&Expires=1573472370&OSSAccessKeyId=TMP.hejeBvgg3UzXhDTRpybqzsZCNfrPhfyLB1c3JfyurUgjjsa5DGfNY4vcX544nyivekVpPcpZC9pN5VWgcYJUpZnYn4yxNBXmnkLRVMzXvjo5o5rwVDpx2BMVaBekvi.tmp&Signature=ieU5b5GWy5GDuei%2BQdB55I%2FMOic%3D" alt="blockchain" title="sqlmap"></p>
-</blockquote>
-<pre><code>sqlmap.py --os-shell </code></pre><blockquote>
+<pre><code>sqlmap.py -u&quot;&quot; --os-shell </code></pre><blockquote>
 <p>用于模拟cmd命令，当你使用此命令是，sqlmap会写入两个PHP上去。你可以上传自己的webshell上去。</p>
 </blockquote>
 
