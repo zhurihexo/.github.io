@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-12T05:37:47.180Z</updated>
+  <updated>2019-12-12T11:55:00.186Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/12/12/flash%E6%9C%A8%E9%A9%AC%E9%92%93%E9%B1%BC/"/>
+    <id>http://yoursite.com/2019/12/12/flash木马钓鱼/</id>
+    <published>2019-12-12T11:42:42.542Z</published>
+    <updated>2019-12-12T11:55:00.186Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="xssFlash攻击"><a href="#xssFlash攻击" class="headerlink" title="xssFlash攻击"></a>xssFlash攻击</h2><h3 id="1-概要"><a href="#1-概要" class="headerlink" title="1) 概要"></a>1) 概要</h3><p>通过插入xss语句使用户跳转到设置好的钓鱼页面，下载flash组件，反弹木马。实现钓鱼攻击</p><h3 id="2-要求"><a href="#2-要求" class="headerlink" title="2) 要求"></a>2) 要求</h3><ul><li><p>准备msf生成木马</p></li><li><p>flash安装包</p></li><li><p>flash官网源码</p></li><li><p>有一台服务器和域名（域名尽量选的逼真一点）</p><a id="more"></a><h2 id="此次实验在本地环境完成的"><a href="#此次实验在本地环境完成的" class="headerlink" title="此次实验在本地环境完成的"></a>此次实验在本地环境完成的</h2><p>首先我们生成一个木马</p></li></ul><p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/Flash/1.png?x-oss-process=style/hexo" alt="blockchain"></p><p> 再去github下载flash源码</p><blockquote><p><a href="https://github.com/r00tSe7en/Fake-flash.cn" target="_blank" rel="noopener">https://github.com/r00tSe7en/Fake-flash.cn</a></p></blockquote><p> 在本地搭建好环境，访问下载好的flash源码</p><p> <img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/Flash/2.png?x-oss-process=style/hexo" alt="blockchain"></p><p>再去flash官网下载一个安装包</p><h4 id="1、此时将两个文件一起压缩"><a href="#1、此时将两个文件一起压缩" class="headerlink" title="1、此时将两个文件一起压缩"></a>1、此时将两个文件一起压缩</h4><p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/Flash/3.png?x-oss-process=style/hexo" alt="blockchain"></p><h4 id="2、更改文件名"><a href="#2、更改文件名" class="headerlink" title="2、更改文件名"></a>2、更改文件名</h4><p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/Flash/4.png?x-oss-process=style/hexo" alt="blockchain"></p><p>点击高级自解压选项，常规</p><h4 id="3、解压路径-gt-绝对路径"><a href="#3、解压路径-gt-绝对路径" class="headerlink" title="3、解压路径-&gt;绝对路径"></a>3、解压路径-&gt;绝对路径</h4><p>C:\windows\temp。</p><p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/Flash/5.png?x-oss-process=style/hexo" alt="blockchain"></p><h4 id="4、设置"><a href="#4、设置" class="headerlink" title="4、设置"></a>4、设置</h4><p>提取后运行</p><p>C:\windows\temp\flash.exe</p><p>C:\windows\temp\flashplayer_install_cn.exe</p><h4 id="5、模式"><a href="#5、模式" class="headerlink" title="5、模式"></a>5、模式</h4><p>安静模式-&gt;全部隐藏</p><h4 id="6、更新"><a href="#6、更新" class="headerlink" title="6、更新"></a>6、更新</h4><p>更新方式-&gt;解压并更新文件</p><p>覆盖方式-&gt;覆盖所有文件</p><p>生成好文件，我们改下图标，让它逼真一点</p><p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/Flash/6.png?x-oss-process=style/hexo" alt="blockchain"><br><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/Flash/7.png?x-oss-process=style/hexo" alt="blockchain"></p><p>制作完成</p><p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/Flash/8.png?x-oss-process=style/hexo" alt="blockchain"></p><p>此时我们修改下页面</p><p>把两个HTML页面修改完成.</p><p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/Flash/9.png?x-oss-process=style/hexo" alt="blockchain"></p><p>打开靶机试验一下</p><p>插入语句</p><p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/Flash/10.png?x-oss-process=style/hexo" alt="blockchain"></p><p>成功弹出</p><p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/Flash/11.png?x-oss-process=style/hexo" alt="blockchain"></p><p>跳转成功</p><p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/Flash/12.png?x-oss-process=style/hexo" alt="blockchain"></p><p>下载到本地</p><p>此时msf开启监听状态</p><p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/Flash/13.png?x-oss-process=style/hexo" alt="blockchain"></p><p>打开文件，弹出安装程序</p><p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/Flash/14.png?x-oss-process=style/hexo" alt="blockchain"></p><p>此时msf接收到shell</p><p><img src="https://zhuri-hexo.oss-cn-beijing.aliyuncs.com/imgs/Flash/15.png?x-oss-process=style/hexo" alt="blockchain"></p><blockquote><p>方法仅供参考，适用于已授权的渗透测试、红队评估、攻防演练，请勿用于其他非法途径。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;xssFlash攻击&quot;&gt;&lt;a href=&quot;#xssFlash攻击&quot; class=&quot;headerlink&quot; title=&quot;xssFlash攻击&quot;&gt;&lt;/a&gt;xssFlash攻击&lt;/h2&gt;&lt;h3 id=&quot;1-概要&quot;&gt;&lt;a href=&quot;#1-概要&quot; class=&quot;headerlink&quot; title=&quot;1) 概要&quot;&gt;&lt;/a&gt;1) 概要&lt;/h3&gt;&lt;p&gt;通过插入xss语句使用户跳转到设置好的钓鱼页面，下载flash组件，反弹木马。实现钓鱼攻击&lt;/p&gt;
+&lt;h3 id=&quot;2-要求&quot;&gt;&lt;a href=&quot;#2-要求&quot; class=&quot;headerlink&quot; title=&quot;2) 要求&quot;&gt;&lt;/a&gt;2) 要求&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;准备msf生成木马&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;flash安装包&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;flash官网源码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;有一台服务器和域名（域名尽量选的逼真一点）&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>sqlmap常用命令</title>

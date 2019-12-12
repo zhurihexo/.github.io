@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2019%2F12%2F12%2Fflash%E6%9C%A8%E9%A9%AC%E9%92%93%E9%B1%BC%2F</url>
+    <content type="text"><![CDATA[xssFlash攻击1) 概要通过插入xss语句使用户跳转到设置好的钓鱼页面，下载flash组件，反弹木马。实现钓鱼攻击 2) 要求 准备msf生成木马 flash安装包 flash官网源码 有一台服务器和域名（域名尽量选的逼真一点） 此次实验在本地环境完成的首先我们生成一个木马 再去github下载flash源码 https://github.com/r00tSe7en/Fake-flash.cn 在本地搭建好环境，访问下载好的flash源码 再去flash官网下载一个安装包 1、此时将两个文件一起压缩 2、更改文件名 点击高级自解压选项，常规 3、解压路径-&gt;绝对路径C:\windows\temp。 4、设置提取后运行 C:\windows\temp\flash.exe C:\windows\temp\flashplayer_install_cn.exe 5、模式安静模式-&gt;全部隐藏 6、更新更新方式-&gt;解压并更新文件 覆盖方式-&gt;覆盖所有文件 生成好文件，我们改下图标，让它逼真一点 制作完成 此时我们修改下页面 把两个HTML页面修改完成. 打开靶机试验一下 插入语句 成功弹出 跳转成功 下载到本地 此时msf开启监听状态 打开文件，弹出安装程序 此时msf接收到shell 方法仅供参考，适用于已授权的渗透测试、红队评估、攻防演练，请勿用于其他非法途径。]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[sqlmap常用命令]]></title>
     <url>%2F2019%2F11%2F11%2Fsqlmap%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
     <content type="text"><![CDATA[sqlmap常用命令sqlmap作为我们渗透测试中的常用工具，必须要熟练掌握. 但是sqlmap本身的命令太多了，难以记忆。所以我在此记录了sqlmap的常用命令。 发送请求sqlmap.py -u&quot;&quot; --cookie=&quot;&quot; 此语句用于后台注入，带上cookie，才能访问到该页面 sqlmap.py -u&quot;&quot; --random-agent 此语句从sqlmap\data\txt目录下的user-agents.txt中随机抽选一个请求头。（因为现在很多网址屏蔽了不带请求头的HTTP请求） sqlmap.py -u&quot;&quot; --delay=6 此语句是设置HTTP请求访问延迟，6为延迟6秒。（现在很多网址对于一个IP多次请求就会直接封IP，所以最好带上） sqlmap.py -u&quot;&quot; --level=3 sqlmap中一共有5个等级的测试 sqlmap.py -u&quot;&quot; --batch 自动帮你选择 y/n 列数据sqlmap.py -u&quot;&quot; --current-db 返回当前正在使用的数据库 sqlmap.py -u&quot;&quot; --current-user 可以获得当前数据库的管理用户 sqlmap.py -u&quot;&quot; --is-dba 检测当前用户是否为管理 sqlmap.py -u&quot;&quot; --users 列出所有管理用户 sqlmap.py -u&quot;&quot; --dbs 列出当前所有数据库 sqlmap.py -u”” –table -D dvwa列出 dvwa库中的所有表 sqlmap.py –u”” –columns -T users -D dvwa列出 users表中的所有字段 sqlmap.py -u”” –dump -C users,password -T users -D dvwa列出两个字段的类容,此时你可以用sqlmap来跑这些密码，sqlmap里面有自动脚本，帮你跑出hash值. sqlmap.py -u&quot;&quot; --os-shell 用于模拟cmd命令，当你使用此命令是，sqlmap会写入两个PHP上去。你可以上传自己的webshell上去。]]></content>
